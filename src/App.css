@@ -1,0 +1,120 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: rgb(197, 248, 248);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: #008080;
+  filter: drop-shadow(0 0 .5em #103843aa);
+
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  will-change: filter;
+  
+}
+.logo:hover {
+  filter: drop-shadow(0 0 .5em #103843aa);
+}
+.chef{
+   color: aliceblue;
+  font-size: 36px;
+  font-family: cursive;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    will-change: filter;
+}
+.chef:hover {
+    color: #4491a2;
+     text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    transition: color 0.3s ease; 
+    font-size: 38px;
+    font-weight: bold;
+      filter: drop-shadow(0 0 .5em #e9f3f6aa); 
+  
+   
+}
+form{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 2rem;
+}
+
+main{
+  padding: 70px 40px;
+}
+input{
+  height: 40px;
+  padding: 10px 20px;
+  border: 2px solid #24543f;
+  border-radius: 5px;
+  width: 450px;
+  font-size: 16px;
+  background-color: rgb(206, 240, 255);
+}
+button{
+  padding: 10px 20px;
+  background-color: #004953;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+button:hover{
+  background-color: #44a27b;
+  transform: scale(1.05);
+  border: #286b46 2px solid;
+  border-radius: 5px;
+}
+.downbox{
+  
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  width: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgb(179, 243, 221);
+  border: 2px solid #24543f;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+      width: 180px; /* Fixed width */
+      height: 60px; /* Fixed height */
+      
+      overflow: hidden;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+}
+.box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
