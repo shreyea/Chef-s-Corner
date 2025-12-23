@@ -2,10 +2,12 @@ import React from 'react';
 import './App.css';
 import './styles/LandingPage.css';
 import './styles/LikedRecipes.css';
+import './styles/ErrorBoundary.css';
 import { Header } from './components/header.jsx';
 import IngredientForm from './formdata.jsx';
 import LandingPage from './components/LandingPage.jsx';
 import LikedRecipes from './components/LikedRecipes.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 
 function App() {
     const [currentView, setCurrentView] = React.useState('landing');
@@ -20,7 +22,11 @@ function App() {
             try {
                 setLikedRecipes(JSON.parse(saved));
             } catch (e) {
-                console.error('Failed to load liked recipes:', e);
+                if (import.meta.env.DEV) {
+                    console.error('Failed to load liked recipes:', e);
+                }
+                // Clear corrupted data
+                localStorage.removeItem('likedRecipes');
             }
         }
     }, []);
@@ -64,12 +70,14 @@ function App() {
     };
 
     return (
-        <>
-            <Header 
-                currentView={currentView}
-                onNavigate={handleNavigate}
-                likedCount={likedRecipes.length}
-            />
+        <ErrorBoundary>
+            {currentView !== 'landing' && (
+                <Header 
+                    currentView={currentView}
+                    onNavigate={handleNavigate}
+                    likedCount={likedRecipes.length}
+                />
+            )}
             
             {currentView === 'landing' && (
                 <LandingPage onGetStarted={handleGetStarted} />
@@ -92,7 +100,7 @@ function App() {
                     onRemoveRecipe={handleRemoveLikedRecipe}
                 />
             )}
-        </>
+        </ErrorBoundary>
     );
 }
 

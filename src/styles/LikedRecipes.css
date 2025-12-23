@@ -3,14 +3,14 @@
    ============================================ */
 
 .liked-recipes-container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: 3rem 2rem;
 }
 
 .liked-header {
     text-align: center;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: 3rem;
 }
 
 .liked-header h1 {
@@ -48,10 +48,10 @@
 
 .empty-state {
     text-align: center;
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: 3rem 2rem;
     background: var(--card-bg);
     border-radius: var(--border-radius-lg);
-    margin-top: var(--spacing-xl);
+    margin-top: 2rem;
 }
 
 .empty-icon {
@@ -78,13 +78,13 @@
 .liked-recipes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    gap: var(--spacing-lg);
+    gap: 2rem;
 }
 
 .liked-recipe-card {
     background: var(--card-bg);
     border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg);
+    padding: 2rem;
     box-shadow: 0 4px 6px -1px var(--card-shadow);
     transition: all var(--transition-medium);
     border: 2px solid transparent;
@@ -105,7 +105,7 @@
 }
 
 .card-number {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: var(--olive-green);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius-sm);
@@ -175,13 +175,13 @@
 }
 
 .ingredient-tag {
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    background: rgba(244, 162, 97, 0.15);
     padding: 0.375rem 0.75rem;
     border-radius: var(--border-radius-sm);
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--primary-color);
-    border: 1px solid #86efac;
+    color: var(--charcoal);
+    border: 1px solid var(--mustard-yellow);
 }
 
 /* Card Recipe Content */
@@ -243,16 +243,52 @@
    ============================================ */
 
 @media (max-width: 768px) {
+    .liked-recipes-container {
+        padding: 2rem 1.5rem;
+    }
+    
     .liked-recipes-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .liked-recipe-card {
-        padding: var(--spacing-md);
+        padding: 1.5rem;
     }
     
     .card-meta {
         flex-direction: column;
-        gap: var(--spacing-sm);
+        gap: 0.75rem;
+    }
+    
+    .liked-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .liked-header .icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .liked-recipes-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .liked-recipe-card {
+        padding: 1.25rem;
+    }
+    
+    .card-ingredients h4 {
+        font-size: 0.875rem;
+    }
+    
+    .ingredient-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .card-recipe {
+        max-height: 300px;
     }
 }

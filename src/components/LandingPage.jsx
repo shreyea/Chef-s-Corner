@@ -14,13 +14,11 @@ function LandingPage({ onGetStarted }) {
                         </div>
                         
                         <h1 className="hero-title">
-                            Transform Your Ingredients into 
-                            <span className="gradient-text"> Delicious Recipes</span>
+                            <span className="gradient-text">  Chef's Corner</span>
                         </h1>
                         
                         <p className="hero-description">
-                            Simply enter what you have in your kitchen, and let our AI chef suggest 
-                            amazing recipes tailored just for you. No waste, just taste!
+                            Transform Your Ingredients into Delicious Recipes with Our AI-Powered Generator.
                         </p>
                         
                         <div className="hero-cta">
@@ -28,10 +26,7 @@ function LandingPage({ onGetStarted }) {
                                 <span>Get Started Free</span>
                                 <span className="btn-icon">→</span>
                             </button>
-                            <button className="btn-secondary">
-                                <span className="play-icon">▶</span>
-                                <span>Watch Demo</span>
-                            </button>
+                            
                         </div>
                         
                         <div className="hero-stats">
@@ -123,7 +118,7 @@ function LandingPage({ onGetStarted }) {
                 {/* How It Works Section */}
                 <section className="how-it-works">
                     <div className="section-header">
-                        <span className="section-badge">Simple Process</span>
+                        <span className="section-badge">Three Simple Steps</span>
                         <h2 className="section-title">How It Works</h2>
                     </div>
                     
@@ -131,8 +126,8 @@ function LandingPage({ onGetStarted }) {
                         <div className="step-item">
                             <div className="step-number">1</div>
                             <div className="step-content">
-                                <h3>Add Ingredients</h3>
-                                <p>Enter what you have in your kitchen</p>
+                                <h3>List Your Ingredients</h3>
+                                <p>Type in what's sitting in your fridge or pantry</p>
                             </div>
                         </div>
                         
@@ -141,8 +136,8 @@ function LandingPage({ onGetStarted }) {
                         <div className="step-item">
                             <div className="step-number">2</div>
                             <div className="step-content">
-                                <h3>AI Magic</h3>
-                                <p>Our AI creates perfect recipes</p>
+                                <h3>Get Recipe Ideas</h3>
+                                <p>Our AI whips up a delicious recipe just for you</p>
                             </div>
                         </div>
                         
@@ -151,8 +146,8 @@ function LandingPage({ onGetStarted }) {
                         <div className="step-item">
                             <div className="step-number">3</div>
                             <div className="step-content">
-                                <h3>Start Cooking</h3>
-                                <p>Follow the recipe and enjoy!</p>
+                                <h3>Cook & Enjoy!</h3>
+                                <p>Follow along and make something amazing</p>
                             </div>
                         </div>
                     </div>
@@ -169,6 +164,8 @@ function LandingPage({ onGetStarted }) {
                         </button>
                     </div>
                 </section>
+                
+               
             </div>
         </div>
     );

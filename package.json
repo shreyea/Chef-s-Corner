@@ -3,16 +3,21 @@
   "homepage": "https://shreyea.github.io/Chef-s-Corner",
   "name": "chef",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "AI-powered recipe generator - Transform your ingredients into delicious recipes",
+  "keywords": ["recipe", "ai", "cooking", "generator", "food", "huggingface"],
+  "author": "Chef's Corner Team",
+  "license": "MIT",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rm -rf dist node_modules",
+    "reinstall": "npm run clean && npm install"
   },
   "dependencies": {
     "@huggingface/inference": "^4.5.3",

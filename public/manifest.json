@@ -1,0 +1,26 @@
+{
+  "name": "Chef's Corner",
+  "short_name": "Chef's Corner",
+  "description": "AI-powered recipe generator. Transform your ingredients into delicious recipes.",
+  "start_url": "/Chef-s-Corner/",
+  "display": "standalone",
+  "background_color": "#FFF3E8",
+  "theme_color": "#6D8F5B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/src/images/chef.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/src/images/chef.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle", "utilities"],
+  "screenshots": []
+}

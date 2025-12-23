@@ -78,7 +78,9 @@ function IngredientForm({
             setCurrentIngredients(ingredients);
         } catch (err) {
             setError(err.message || "Failed to generate recipe. Please try again.");
-            console.error("Recipe generation error:", err);
+            if (import.meta.env.DEV) {
+                console.error("Recipe generation error:", err);
+            }
         } finally {
             setLoading(false);
         }

@@ -46,7 +46,7 @@ export async function getRecipeFromMistral(ingredientsArr) {
 
     for (let i = 0; i < models.length; i++) {
         try {
-            console.log(`Trying model: ${models[i]}`);
+            // Trying model: ${models[i]}
             
             try {
                 const response = await hf.chatCompletion({
@@ -64,7 +64,7 @@ export async function getRecipeFromMistral(ingredientsArr) {
 
                 return response.choices[0].message.content;
             } catch (chatError) {
-                console.log(`Chat completion failed for ${models[i]}, trying text generation...`);
+                // Chat completion failed, trying text generation fallback
                 
                 const textResponse = await hf.textGeneration({
                     model: models[i],
@@ -79,7 +79,9 @@ export async function getRecipeFromMistral(ingredientsArr) {
                 return textResponse.generated_text;
             }
         } catch (err) {
-            console.error(`Model ${models[i]} failed:`, err.message);
+            if (import.meta.env.DEV) {
+                console.error(`Model ${models[i]} failed:`, err.message);
+            }
             
             if (i === models.length - 1) {
                 if (err.message.includes('token') || err.message.includes('401')) {
