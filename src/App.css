@@ -9,10 +9,10 @@
 :root {
   /* Color Palette - Chef's Corner */
   --tomato-red: #E63946;
-  --mustard-yellow: #ed8b3b;
+  --mustard-yellow:  #65360f;
   --cream-white: #FFF3E8;
   --olive-green: #6D8F5B;
-  --charcoal: #2B2B2B;
+  --charcoal: #383737;
   
   --primary-color: #E63946;
   --primary-dark: #c42e3a;
@@ -20,7 +20,7 @@
   --accent-color: #61f466;
   --accent-hover: #e89450;
   --secondary-color: #6D8F5B;
-  
+    
   --bg-color: #FFF3E8;
   --card-bg: #ffffff;
   --card-shadow: rgba(230, 57, 70, 0.08);
