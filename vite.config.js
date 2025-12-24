@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Chef-s-Corner/', // GitHub Pages base path
+  base: '/', // Use root path for Vercel deployment
   build: {
     outDir: 'dist',
     sourcemap: false, // Disable sourcemaps in production for security

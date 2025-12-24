@@ -1,12 +1,17 @@
-
 {
-  "homepage": "https://shreyea.github.io/Chef-s-Corner",
   "name": "chef",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "description": "AI-powered recipe generator - Transform your ingredients into delicious recipes",
-  "keywords": ["recipe", "ai", "cooking", "generator", "food", "huggingface"],
+  "keywords": [
+    "recipe",
+    "ai",
+    "cooking",
+    "generator",
+    "food",
+    "huggingface"
+  ],
   "author": "Chef's Corner Team",
   "license": "MIT",
   "scripts": {
@@ -35,6 +40,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
+    "terser": "^5.44.1",
     "vite": "^7.0.4"
   }
 }
