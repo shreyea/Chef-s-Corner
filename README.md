@@ -2,7 +2,7 @@
 
 A modern, production-ready AI-powered recipe generator that creates personalized recipes based on your ingredients. Built with React and Vite, featuring a fully responsive, accessible, and human-centered interface.
 
-🌐 **Live Demo**: [https://shreyea.github.io/Chef-s-Corner/](https://shreyea.github.io/Chef-s-Corner/)
+🌐 **Live Demo**: https://chefs-cornr.vercel.app/
 
 ## ✨ Features
 
